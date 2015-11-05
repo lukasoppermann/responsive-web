@@ -1,0 +1,38 @@
+h1 {
+  color: rgb(100,150,150);
+}
+.copy-text{
+    padding: 20px 30px 0 30px;
+    transition: padding 1s;
+}
+@media (max-width: 500px){
+    .copy-text{
+        padding: 10px 10px 0 10px;
+    }
+}
+img{
+    width: 100%;
+    height: auto;
+}
+.bild{
+    width: 100%;
+    max-width: 600px;
+    background: rgb(100,150,150);
+    margin: 0 10px;
+}
+@media (max-width: 500px){
+    .bild{
+        margin: 0;
+    }
+}
+/*.copy-text p{
+-webkit-columns: 2 200px;
+   -moz-columns: 2 200px;
+        columns: 2 200px;
+-webkit-column-gap: 4em;
+   -moz-column-gap: 4em;
+        column-gap: 4em;
+-webkit-column-rule: 1px dotted #ddd;
+   -moz-column-rule: 1px dotted #ddd;
+        column-rule: 1px dotted #ddd;
+}*/
