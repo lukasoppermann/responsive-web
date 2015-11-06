@@ -6,7 +6,7 @@ var minify = require('gulp-minify-css');
 
 // less Task
 gulp.task('less', function(){
-    return gulp.src('./resources/less/*.less')
+    return gulp.src(['./resources/less/base.less', './resources/less/*.less', './resources/less/utilities.less'])
             .pipe(less())
             .pipe(concat('app.min.css'))
             .pipe(minify())
