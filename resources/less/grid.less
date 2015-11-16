@@ -1,5 +1,157 @@
-// needs to be implemented
+//*Testing*//
+.o-grid{
+    background: rgb(220, 220, 220);
+    margin: 10px;
+    height: 200px;
+}
+.o-grid__column{
+    background: rgb(255, 255, 255);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+    height: 100px;
+    flex-grow: 1;
+    flex-basis: 250px;
+}
+// old: refactor
 .o-grid--1of3{
     width: 33%;
     max-width: 35rem;
+}
+//*END Testing*//
+
+// grid container
+.o-grid{
+    display: flex;
+    flex-wrap: wrap;
+}
+.o-grid--start{
+    justify-content: flex-start;
+}
+.o-grid--center{
+    justify-content: center;
+}
+.o-grid--end{
+    justify-content: flex-end;
+}
+.o-grid--space-between{
+    justify-content: space-between;
+}
+.o-grid--space-around{
+    justify-content: space-around;
+}
+.o-grid--items-start{
+    align-items: flex-start;
+}
+.o-grid--items-end{
+    align-items: flex-end;
+}
+.o-grid--items-center{
+    align-items: center;
+}
+.o-grid--items-stretch{
+    align-items: stretch;
+}
+.o-grid--items-baseline{
+    align-items: baseline;
+}
+// grid items
+.o-grid__column--start{
+    align-self: flex-start;
+}
+.o-grid__column--end{
+    align-self: flex-end;
+}
+.o-grid__column--center{
+    align-self: center;
+}
+.o-grid__column--stretch{
+    align-self: stretch;
+}
+.o-grid__column--baseline{
+    align-self: baseline;
+}
+.o-grid__column{
+    flex-basis: 8.333%;
+    max-width: 8.333%;
+}
+.o-grid__column--1of12{
+    flex-basis: 8.333%;
+    max-width: 8.333%;
+}
+.o-grid__column--2of12{
+    flex-basis: 16.666%;
+    max-width: 16.666%;
+}
+.o-grid__column--3of12{
+    flex-basis: 25%;
+    max-width: 25%;
+}
+.o-grid__column--4of12{
+    flex-basis: 33.333%;
+    max-width: 33.333%;
+}
+.o-grid__column--5of12{
+    flex-basis: 41.666%;
+    max-width: 41.666%;
+}
+.o-grid__column--6of12{
+    flex-basis: 50%;
+    max-width: 50%;
+}
+.o-grid__column--7of12{
+    flex-basis: 58.333%;
+    max-width: 58.333%;
+}
+.o-grid__column--8of12{
+    flex-basis: 66.666%;
+    max-width: 66.666%;
+}
+.o-grid__column--9of12{
+    flex-basis: 75%;
+    max-width: 75%;
+}
+.o-grid__column--10of12{
+    flex-basis: 83.333%;
+    max-width: 83.333%;
+}
+.o-grid__column--11of12{
+    flex-basis: 91.666%;
+    max-width: 91.666%;
+}
+.o-grid__column--12of12{
+    flex-basis: 100%;
+    max-width: 100%;
+}
+
+.o-grid__offset--1of12{
+    margin-left: 8.333%;
+}
+.o-grid__offset--2of12{
+    margin-left: 16.666%;
+}
+.o-grid__offset--3of12{
+    margin-left: 25%;
+}
+.o-grid__offset--4of12{
+    margin-left: 33.333%;
+}
+.o-grid__offset--5of12{
+    margin-left: 41.666%;
+}
+.o-grid__offset--6of12{
+    margin-left: 50%;
+}
+.o-grid__offset--7of12{
+    margin-left: 58.333%;
+}
+.o-grid__offset--8of12{
+    margin-left: 66.666%;
+}
+.o-grid__offset--9of12{
+    margin-left: 75%;
+}
+.o-grid__offset--10of12{
+    margin-left: 83.333%;
+}
+.o-grid__offset--11of12{
+    margin-left: 91.666%;
 }
