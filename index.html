@@ -5,8 +5,34 @@
         <link rel="stylesheet" href="./css/app.min.css" media="screen">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
         <title>Lukas Oppermann - UX & Interface Design</title>
+        <style media="screen">
+            #testRect{
+                transition: all .25s;
+                transform: translateX(50%);
+                fill: yellow;
+            }
+            #testRect.test{
+                transform: translateX(0%);
+                fill: black;
+            }
+        </style>
     </head>
     <body>
+        <svg style="display:none" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        	 width="595.28px" height="841.89px" viewBox="0 0 595.28 841.89" enable-background="new 0 0 595.28 841.89" xml:space="preserve">
+        <symbol id="plus">
+        <polygon points="378.147,199.513 253.659,199.513 253.659,75.026 170.558,75.026 170.558,199.513 46.073,199.513 46.073,282.617
+        	170.558,282.617 170.558,407.105 253.659,407.105 253.659,282.617 378.147,282.617 "/>
+        </symbol>
+        <symbol id="activity">
+        <g>
+        	<polygon points="341.13,708.82 317.594,652.103 294.057,708.82 244.615,708.82 217.158,606.547 189.666,708.82 122.673,708.82
+        		122.673,673.362 162.493,673.362 217.158,469.885 271.246,671.302 317.594,559.648 364.815,673.362 423.671,673.362
+        		423.671,708.82 341.13,708.82 	"/>
+        </g>
+        </symbol>
+        </svg>
+
         <header>
             <nav class="o-navigation">
                 <div class="o-logo">
@@ -24,6 +50,15 @@
             </nav>
 
             <div class="o-figure o-figure--full c-banner">
+                <svg style="fill:blue; width: 100px;" viewBox="0 0 512 512" class="o-icon o-icon--white o-media__figure">
+                  <use xlink:href="#activity"></use>
+                </svg>
+                <svg style="fill:yellow; width: 100px;" viewBox="0 0 512 512" class="o-icon o-icon--white o-media__figure">
+                  <use xlink:href="#plus"></use>
+                </svg>
+                <svg style="fill:red; width: 100px;" viewBox="0 0 512 512" class="o-icon o-icon--white o-media__figure">
+                  <use xlink:href="#plus"></use>
+                </svg>
                 <p class="o-figure__description o-figure__description--centered c-banner__title">Lukas Oppermann</p>
                 <img class="o-figure__image" src="./media/lukas-oppermann-design.png" alt="Lukas Oppermann Design" />
             </div>
@@ -41,94 +76,13 @@
             </div>
         </div>
 
-        <div class="o-grid o-grid--space-between">
-            <div class="o-grid__column"></div>
-            <div class="o-grid__column"></div>
-            <div class="o-grid__column"></div>
-            <div class="o-grid__column"></div>
-            <div class="o-grid__column"></div>
-            <div class="o-grid__column"></div>
-        </div>
-
-        <div class="o-grid o-grid--center">
-            <div class="o-grid__column"></div>
-            <div class="o-grid__column"></div>
-            <div class="o-grid__column"></div>
-            <div class="o-grid__column"></div>
-            <div class="o-grid__column"></div>
-            <div class="o-grid__column"></div>
-        </div>
-
-        <div class="o-grid o-grid--end o-grid--items-end">
-            <div class="o-grid__column"></div>
-            <div class="o-grid__column"></div>
-            <div class="o-grid__column"></div>
-            <div class="o-grid__column"></div>
-            <div class="o-grid__column"></div>
-            <div class="o-grid__column"></div>
-        </div>
-
-        <div class="o-grid o-grid--start o-grid--items-center">
-            <div class="o-grid__column"></div>
-            <div class="o-grid__column"></div>
-            <div class="o-grid__column"></div>
-            <div class="o-grid__column"></div>
-            <div class="o-grid__column o-grid__column--end"></div>
-            <div class="o-grid__column o-grid__column--start"></div>
-        </div>
-
-        <div class="o-grid o-grid--start o-grid--items-baseline">
-            <div class="o-grid__column">Test, natural 1</div>
-            <div class="o-grid__column"><h1>Headline</h1></div>
-            <div class="o-grid__column"><p>Some copy text</p></div>
-            <div class="o-grid__column" style="order: -1"><h2>Headline, order: -1</h2></div>
-            <div class="o-grid__column" style="order: 1"><h3>Headline, order: 1</h3></div>
-            <div class="o-grid__column"></div>
-        </div>
-
-        <div class="o-grid o-grid--items-center">
-            <div class="flex-item" style="flex-grow: 1;">flex-grow: 1</div>
-            <div class="flex-item" style="flex-grow: 2;">flex-grow: 2</div>
-            <div class="flex-item" style="flex-grow: .5;">flex-grow: .5</div>
-        </div>
-        <div class="o-grid o-grid--items-center">
-            <div class="flex-item" style="flex-shrink: 0;">flex-shrink: 0</div>
-            <div class="flex-item" style="flex-shrink: 1;">flex-shrink: 1</div>
-            <div class="flex-item" style="flex-shrink: 2;">flex-shrink: 2</div>
-        </div>
-        <div class="o-grid o-grid--items-center" style="flex-wrap: wrap;">
-            <div class="flex-item" style="">Parent: flex-wrap: wrap;</div>
-            <div class="flex-item" style="">items: flex-basis: 250px;</div>
-            <div class="flex-item" style="">Parent = flex container</div>
-        </div>
-        <div class="o-grid o-grid--items-center" style="flex-wrap: wrap-reverse;">
-            <div class="flex-item" style="">Parent: flex-wrap: wrap-reverse;</div>
-            <div class="flex-item" style="">items: flex-basis: 250px;</div>
-            <div class="flex-item" style="">Parent = flex container</div>
-        </div>
-        <div class="o-grid o-grid--items-center" style="flex-direction: column;">
-            <div class="flex-item" style="">1: flex-direction: column;</div>
-            <div class="flex-item" style="">2: flex-direction: column;</div>
-            <div class="flex-item" style="">3: flex-direction: column;</div>
-        </div>
-        <div class="o-grid o-grid--items-center" style="flex-direction: column-reverse;">
-            <div class="flex-item" style="">1: flex-direction: column-reverse;</div>
-            <div class="flex-item" style="">2: flex-direction: column-reverse;</div>
-            <div class="flex-item" style="">3: flex-direction: column-reverse;</div>
-        </div>
-        <div class="o-grid o-grid--items-center" style="flex-direction: row;">
-            <div class="flex-item" style="">1: This is the default</div>
-            <div class="flex-item" style="">2: flex-direction: row;</div>
-            <div class="flex-item" style="">3: flex-direction: row;</div>
-        </div>
-
         <div class="o-grid">
-            <div class="o-grid__offset--10of12 o-grid__column">1</div>
-            <div class="o-grid__offset--1of12 o-grid__column">2</div>
-            <div class="o-grid__column">3</div>
+            <div class="o-grid__offset--1of12 o-grid__column o-grid__column--6of12 o-grid__column--mobile--3of12"></div>
+            <div class="o-grid__column o-grid__column--mobile--3of12"></div>
+            <div class="o-grid__column o-grid__column--mobile--3of12 o-grid__column--2of12"></div>
+            <div class="o-grid__column o-grid__column--mobile--3of12"></div>
+            <div class="o-grid__column o-grid__column--mobile--3of12"></div>
+            <div class="o-grid__column o-grid__column--mobile--3of12"></div>
         </div>
-
-         <!-- o-grid--items-center -->
-<!-- style="flex-direction: row-reverse;" -->
     </body>
 </html>

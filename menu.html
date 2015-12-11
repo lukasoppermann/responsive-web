@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="css/menu.css" media="screen">
+    </head>
+    <body>
+
+        <nav class="o-nav">
+            <div class="o-nav__icon">
+                <span></span>
+            </div>
+            <ul class="o-menu">
+                <li class="o-menu__item"><a href="#Portfolio">Portfolio</a></li>
+                <li class="o-menu__item"><a href="#About">About</a></li>
+                <li class="o-menu__item"><a href="#Blog">Blog</a></li>
+                <li class="o-menu__item"><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+
+    <script  src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        $('.o-nav__icon').on('click', function(){
+            $('.o-nav').toggleClass('is-active');
+        });
+    </script>
+
+    </body>
+</html>

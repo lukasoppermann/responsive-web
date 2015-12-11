@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style media="screen">
+            .rain:hover{
+                fill: blue;
+                stroke: 1px;
+            }
+            @media screen and (min-width: 500px) and (max-width: 1199px) {
+                .rain{
+                    fill: green;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <svg id="raincloud" xmlns="http://www.w3.org/2000/svg" width="166" height="156.5" viewBox="0 0 166 156.5">
+            <style type="text/css">
+                #cloud{
+                    fill: #add4d6;
+                }
+                #rain{
+                    animation: blink 3s infinite;
+                }
+                @keyframes blink {
+                  0% {
+                    fill: red;
+                  }
+                  50% {
+                    fill: blue;
+                  }
+                  100% {
+                    fill: red;
+                  }
+            </style>
+          <path id="cloud" d="M121.2 6c-8.7 0-16.8 3-23.3 7.8C91.4 9 83.5 6.3 75 6.3c-11.2 0-21.4 5-28.5 12.6C26.3 19.2 10 35.7 10 56c0 20.5 16.7 37.2 37.2 37.2 2.7 0 5.3-.3 7.8-.8 7 6.6 16.3 10.7 26.7 10.7 14.8 0 27.6-8.3 34-20.5 2 .3 3.7.4 5.6.4 21.3 0 38.6-17.3 38.6-38.6C159.7 23.3 142.4 6 121 6z"/>
+          <g id="rain" fill="#009BBD">
+            <path id="rain3" class="rain" d="M49 138.2c0 2.8-2.2 5-4.7 5s-4.6-2.2-4.6-5v-19.7c0-2.8 2-5 4.6-5s4.6 2.2 4.6 5v19.7z"/>
+            <path id="rain2" class="rain" d="M74.8 145.4c0 2.8-2 5-4.6 5-2.5 0-4.6-2.2-4.6-5v-19.7c0-2.8 2-5 4.6-5 2.5 0 4.6 2.2 4.6 5v19.7z"/>
+            <path id="rain1" class="rain" d="M109.3 134.4c0 2.8-2 5-4.6 5-2.5 0-4.6-2.2-4.6-5v-19.7c0-2.8 2.2-5 4.7-5s4.6 2.2 4.6 5v19.7z"/>
+          </g>
+        </svg>
+
+        <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="97.6" height="148.8" viewBox="0 0 97.6 148.8">
+            <style type="text/css">
+            #Outer, #innerTop{
+                stroke-dasharray: 405 405;
+                animation: draw 3s;
+                animation-timing-function: linear;
+            }
+            @keyframes draw {
+                0% {
+                stroke-dashoffset:-405;
+              }
+              100% {
+                stroke-dashoffset:0;
+              }
+            }
+            </style>
+          <g fill="none" stroke="#000">
+            <path id="Outer" d="M10.7 11c7.2-1.6 18.5-2.7 30-2.7 16.6 0 27 2.8 35 9.3C82.5 22.4 86.5 30 86.5 40c0 12.3-8 23-21.6 28v.4c12 3 26.3 13 26.3 32 0 11-4.2 19.3-10.7 25.5-9 8-23.3 11.8-44 11.8-11.4 0-20-.8-25.6-1.5V11z"/>
+            <path id="innerTop" d="M27.2 63h15c17.3 0 27.5-9 27.5-21.3 0-15-11.3-20.8-28-20.8-7.6 0-12 .5-14.6 1v41z"/>
+            <path id="innerBottom" d="M27.2 124c3.2.7 8 1 13.8 1 17 0 32.7-6.3 32.7-25 0-17.3-15-24.5-33-24.5H27.3V124z"/>
+          </g>
+        </svg>
+
+        <style type="text/css">
+.maskSVG {
+  width: 500px;
+}
+
+.clip {
+  animation: slide 8s infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateY(-135px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  0% {
+    transform: translateY(-135px);
+  }
+}
+</style>
+
+<svg class="maskSVG" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <clipPath id="clip">
+      <path class="clip" d="M101.807,123.37c10-0.352,18.193,5.401,18.193,5.401V0H0v128.771c0,0,9.701-5.227,17.069-5.227s10.464,6.314,20.877,6.314
+	c10.175,0,12.703-4.209,22.053-4.209s11.981,5.438,20.578,5.438S91.807,123.722,101.807,123.37z">
+      </path>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip)">
+    <path class="logo" fill="black" d="M42.8 6.7c19.4 0 46.6 2.8 46.6 35 0 20-12.8 26.4-20.4 30.2 9.4 2.6 25 10 25 33 0 33.4-23.8 38.8-49.6 38.8H11.6c-3.4 0-4.2-.8-4.2-4.2V10.9c0-3.6.8-4.2 4.2-4.2h31.2zm-2.2 56.6c11.8 0 21.8-3 21.8-18.8 0-12.6-8.6-16.8-19.6-16.8h-8.4v35.6h6.2zm1 59.4c13.8 0 25.4-2.4 25.4-19.4 0-16.8-11.6-19-25-19h-7.6v38.4h7.2z"/>
+  </g>
+</svg>
+
+
+    </body>
+</html>
